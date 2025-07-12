@@ -22,6 +22,6 @@ Now that you gathered some basic understanding of the Powershell CLI, here is an
 12 - Get-ChildItem -File -Recurse -Force | Where-Object { $_.Attributes -match "Hidden" } - secret_sauce  
 13 - Get-ADDomainController -Filter *i_authenticate_things / Get-ADComputer UTW -Properties Description | Select-Object Name, Description --> i_authenticate_things  
 14 - ((Get-Content .\countmywords) -split "\s+").Count --> 755  
-15 - ((Get-Content .\countpolos) -split "\s+" | Where-Object { $_ -eq "polo" }).Count - 153
+15 - ((Get-Content .\countpolos) -split "\s+" | Where-Object { $_ -eq "polo" }).Count --> 153
 
 
