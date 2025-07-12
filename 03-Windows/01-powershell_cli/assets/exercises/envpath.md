@@ -16,8 +16,8 @@ Then you could use environment variables, which are variables stored at the OS l
 - Try to call rufus from anywhere
 - I would like you to have a look at [the recognized environment variables available on windows](https://docs.microsoft.com/en-us/windows/deployment/usmt/usmt-recognized-environment-variables).
 - Write a small script reporting your computer specs and convert it in a csv file. You might have some trouble executing your script once saved. Why? How can you change it in a secure way?  
-   $sys_array = "computername", "number_of_processors", "os", "processor_architecture", "username"; foreach ($var in $sys_array) { echo "$var,$($env[$var])" } | Out-File "sys-spec.csv"
-   It cannot be executed due to the Windows Execution Policy, a security feature that prevents the execution of unhautorized   scripts. By default it's set on Restricted.
+   $sys_array = "computername", "number_of_processors", "os", "processor_architecture", "username"; foreach ($var in $sys_array) { echo "$var,$($env[$var])" } | Out-File "sys-spec.csv"  
+   It cannot be executed due to the Windows Execution Policy, a security feature that prevents the execution of unhautorized   scripts. By default it's set on Restricted.  
   With the command Set-ExecutionPolicy -Scope CurrentUser -ExecutionPolicy RemoteSigned it's possible to allow the execution of all the locally created script just for the current user and demands an attendible author for the ones downloaded from the Internet. Otherwise, Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass make the script executable only for the current powershell session.
   
 > **WARNING**: This exercise will **only work on windows** since it's specific to the way windows manages environment variables.
