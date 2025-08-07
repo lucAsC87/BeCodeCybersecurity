@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Saved names</title>
+</head>
+<body>
+    <h2>Used Names:</h2>
+    <ul>
+      {% for n in names %}
+        <li>{{ n.name }}</li>
+      {% endfor %}
+    </ul>
+    <a href="{{ url_for('form') }}">Add a name</a>
+</body>
+</html>
